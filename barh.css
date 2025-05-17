@@ -1,0 +1,57 @@
+h1{
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+}
+h2{
+    font-family: Helvetica, sans-serif;
+    text-align: right;
+
+}
+h3{
+    font-family: cosic sans , conic sans ms,cursive;
+}
+p{
+    font-family: fantasy;
+    font-weight: 800;
+    text-decoration: line-through;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #2695A6;
+}
+
+th{
+    font-weight: 800;
+    background-color: #2695A6;
+    color: #ffffff;
+}
+
+tr.alt td{
+    background-color: #9AEFFC;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+
+#menu-bar a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+#menu-bar a:hover{
+    background-color: aqua;
+    color: white;
+    
+}
