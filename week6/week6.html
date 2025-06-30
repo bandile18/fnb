@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+
+    </head>
+    <body>
+        <div id="table">contacts loading...</div>
+        <button id="refresh" type="button">Refresh</button>
+        <button id="addcontact" type="button">Add Contact</button>
+
+
+        
+        <script src="config.js"></script>
+        <script>
+            function fetchcontact(){
+                fetch(rootpath + "controller/get-contacts/")
+                .then(function(response){
+                    return response.json();
+            })
+            .then(function(data){
+                //displayOutput(data);
+                console.log(data);
+            })
+        }
+
+        </script>
+
+    </body>
+</html>

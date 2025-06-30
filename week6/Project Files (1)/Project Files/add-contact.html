@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+    </head>
+    <body>
+        <br/>
+        <form id="editForm">
+            <label for="fristname">first name</label>
+            <input type="text" name="firstname" id="firstname"></br>
+            <labe for="lastname">lastname </label>
+            <input type="text" name="lastname" id="lastname"></br>
+            <label for="mobile">mobile</label>
+            <input type="text" name="mobile" id="mobile"></br>
+            <label for="email">email </label>
+            <input type="text" name="email" id="email"></br>
+            <label for="avatar">select a file</label><br/>
+            <input type="file" name="avatar" id="avatar"></br>
+            <button type="submit" id="submitform">submit</button>   
+
+        </form>
+    
+    </br>
+    <button id="homelink" type="button">Home</button>
+    <script src="config.js"></script>
+    <script>
+
+        function submitform(e){
+            e.preventDefault();
+
+            const form = new formData(document.queryselector('#editForm'));
+            form.append('apiKey',apiKey);
+            fetch(rootpath + 'controller/get-cantacts',{
+                method:'POST',
+                headers:{'Accept': 'application/json, *.*'},
+
+
+            })
+            .than(function(response){
+                return response.text();
+            })
+            .than(function(data){
+                if(data == "1"){
+                alert("contact added.");
+                homelink();
+
+                }else{
+                    alert(data);
+                    homelink();
+                    
+                }
+
+            })
+        }
+        function homelink(){
+            window.open("index.html","_self");
+        }
+        
+    </script>
+
+    </body>
+</html>
